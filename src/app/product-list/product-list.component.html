@@ -1,0 +1,41 @@
+<div class="input"> 
+   
+    <input  class="input1" type="text" [(ngModel)]="input" placeholder="Search..."><button (click)="search()" class="inptbtn">Enter</button>
+</div>
+<div class="mainfilter">
+<div class="range">
+    <label>Range</label> 
+    <input  type="number" min="0" [(ngModel)]="min" class="min" placeholder="From">
+    <input  type="number" min="0" [(ngModel)]="max" class="min" placeholder="To">
+    <button (click)="range()" class="btn">Click</button>
+</div>
+<div class="filter">
+    <p>Sort By Price:</p>
+    <p (click)="lowToHigh()"  [ngClass]="{'clicked': lthclicked === true}" class="filter2">Low to High</p>
+    <p (click)="highToLow()"  [ngClass]="{'clicked': htlclicked === true}" class="filter2">High to Low</p>
+    
+    </div>
+</div>
+
+    <p class="catagory">Total {{data.length}}result found</p>
+    <div class="products">
+        <div class="container" *ngFor="let item of data | paginate: { itemsPerPage: count, currentPage: p }">
+           
+              <div class="product-item">
+                <a   [routerLink]="['/product',item.title]"><img src={{item.image_link}} alt="" class="imag"></a>
+                <div class="content">
+                 <h5 class="title" >{{ item.title | slice:0:60}}...</h5>
+                 <div class="test">
+                    <h4 class="price">RS {{item.price}}</h4>
+                    <button class="ATC">ADD TO CART</button> 
+                 </div>
+                  
+                </div>
+                 
+                
+              </div>
+         </div>
+      </div>
+      <div class="text-right">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>

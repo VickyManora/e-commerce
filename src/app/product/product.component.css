@@ -1,0 +1,45 @@
+.product-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.catagory{
+    color:grey;
+    font-family: Lucida Bright;
+    font-size: small;
+    margin-bottom: 50px;
+}
+.product-content{
+    margin: 100px;
+}
+.ATC{
+    background-color: black;
+    color: white;
+    padding:10px
+}
+.content{
+    color:grey;
+}
+.imag{
+    width: 80%;
+    padding: 20px;
+}
+.title{
+    color:black;
+    font-family: Lucida Bright;
+}
+.desc{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Lucida Bright;    
+}
+.descdata{
+    color: grey;
+    font-family: Arial Narrow;
+    margin-bottom: 100px;
+}
+.input{
+width: 30px;
+margin: 10px;
+height: 30px;
+}

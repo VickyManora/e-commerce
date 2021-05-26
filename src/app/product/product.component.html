@@ -1,0 +1,38 @@
+
+<div class="catagory">
+    {{data[0].product_type}}
+</div>
+
+<div class="products">
+  
+    <div class="container" *ngFor="let item of data ">
+       
+              <div class="product-item">
+                <div> 
+                  <a><img src={{item.image_link}} alt="" class="imag"></a>
+                </div>
+           
+               <div class="product-content">
+                 <div class="content">      
+                  <h4 class="title">{{item.title}}</h4>
+                  <span style="font-size: 130%;color: grey;">★</span>
+                  <span style="font-size: 130%;color: grey;">★</span>
+                  <span style="font-size: 130%;color: grey;">★</span>
+                  <span style="font-size: 130%;color: grey;">★</span>
+                  <span style="font-size: 130%;color: grey;">★</span>
+                  <span> ( 2 customer reviews)</span>
+                  <h4 class="price">RS {{item.price}}</h4>
+                  <h4>Size:{{item.size}}</h4>
+                 </div>
+                 <input class="input" [(ngModel)]="input">    
+                 <button class="ATC">ADD TO CART</button> 
+               </div>
+          </div>
+     </div>
+  </div>
+
+<div>
+  <p class="desc">Product Description</p>
+  <p class="descdata"> {{data[0].description}}</p>
+</div>   
+
